@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Position</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		img{
+			max-width: 100%;
+			vertical-align: middle;
+		}
+		body{
+			margin: 0 auto;
+			padding: 0;width: 1000px;
+			border: 1px solid #000000;
+		}
+		.container{
+		}
+		#menu{
+			width: 250px;
+			background-color:  #33b5e5;
+			float: left;
+			/*border: 1px solid red;*/
+		}
+		.adword {
+			background-color:  white;
+		}
+		.adword h3{
+			font-size: 20px;
+			font-style: italic;
+			text-align: justify;
+			padding-top: 20px;
+			padding-left: 5px;
+		}
+		.adword img{
+			width: 250px;
+			margin-top: 5px;
+		}
+		.sub-menu{
+			padding: 0;
+			margin: 0;
+			width: 250px;
+			background-color:  #33b5e5;
+		}
+		a{
+			text-decoration: none;	
+		}
+		#menu li{
+				list-style-type: none;
+				height: 30px;
+				line-height: 30px;
+				border-bottom: 1px solid #dddddd;
+				padding: 0 5px;
+				position: relative;
+		}
+		#menu li a{
+				font-size: 18px;
+				color: #ffffff;
+				font-weight: bold;
+				/*display: block;*/
+		}
+		#menu li:hover{
+				text-decoration: underline;
+				background-color: #3498db;
+		}
+		#menu li ul{
+			position: absolute;
+			left: 250px;
+			top: 0;
+			display: none;
+		}
+		#menu li:hover .sub-menu{
+			display: block;
+			z-index: -1;
+		}
+		#product{
+			width: 747px;
+			float: right;
+		}
+		.main-menu{
+			/* width: 747px; 
+			float: right;*/
+			background-color: #3498db;
+			/* height: 50px;line-height: 50px; */
+			text-align: center;
+			height: 70px;line-height:70px;
+		}
+		
+		.main-menu a img{
+			max-width: 250px;
+			height: 69px;
+			position: absolute;
+			left: -250px;
+		}
+		.main-menu a{
+			position: relative;
+			color: #ecf0f1;
+			padding:10px 20px;
+			font-size: 18px;
+			font-weight: bold;
+			/* border: 1px solid red; */
+		}
+		.main-menu a:first-child:hover{
+			background-color: #3498db;
+		}
+		.main-menu a:hover{
+			text-decoration: underline;	
+			background-color: white;
+			color: black;
+		}
+		
+		.item{
+			float: left;
+			text-align: center;
+			border: 1px solid #3498db;;
+			width: 350px;height: 300px;
+			margin: 5px 10px;
+		}
+		.clear{
+			clear: both;
+		}
+		.header{
+			font-style: italic;
+			font-size: 20px;
+			color: #1abc9c;
+			margin-left: 10px;
+		}
+		.productname{
+			color: #1abc9c;
+		}
+		.footer{
+			margin-top: 5px;
+			border: 1px solid #333;
+			height: 100px;
+			padding-top: 25px;
+			background-color: #3498db;
+		}
+		@keyframes footer{
+			0%{transform: translateX(860px); opacity: 0;}
+			50%{transform: translateX(860px);opacity: 1;width: 100px}
+			100%{transform: translateX(200px);opacity: 0;}
+		}
+		.footer p{
+			margin-top: 10px;
+			font-size: 20px;
+			font-weight: bold;
+			position: relative;
+			animation: footer 8s ease 3s infinite;
+			opacity: 0;
+			border: 1px solid red;
+		}
+		.top{
+			position: fixed;
+			bottom: 30px;
+			right: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="banner">
+			<img src="img/bannergdt102.png" alt="banner" title="Khuyến mãi" width="1000px" height="240px">
+		</div>
+		<div class="main-menu">
+			<a href="https://www.facebook.com/"><img src="img/dienmayxanh.png" alt=""></a>
+			<a href="">Trang chủ</a>
+			<a href="">Sản phẩm</a>
+			<a href="">Bảo hành</a>
+			<a href="">Liên hệ</a>
+		</div>
+		<!-- <div class="clear"></div> -->
+		<div id="menu">
+				<li><a href="">Ti vi</a>
+					  <ul class="sub-menu">
+						<li><a href="">Tivi TCL 43 inch </a></li>
+						<li><a href="">Tivi Panasonic 4K 43 inch </a></li>
+					</ul>  
+				</li>
+				<li><a href="">Máy giặt</a>
+					  <ul class="sub-menu">
+						<li><a href="">Máy giặt Samsung 9 kg</a></li>
+						<li><a href="">Máy giặt Panasonic 9kg</a></li>
+					</ul>  
+				</li>
+				<li><a href="">Đồ gia dụng</a>
+					 <ul class="sub-menu">
+						<li><a href="">Bình siêu tốc Delites 1.8 lít </a></li>
+						<li><a href="">Nồi cơm điện Delites 1.8 lít </a></li>
+						<li><a href="">Máy sấy tóc Delites </a></li>
+						<li><a href="">Nồi cơm điện Delites 1.5 lít</a></li>
+					</ul> 
+				</li>
+				<li><a href="">Điều hòa</a>
+					 <ul class="sub-menu">
+						<li><a href="">Máy lạnh Panasonic Inverter </a></li>
+						<li><a href="">Máy lạnh Samsung Inverter </a></li>
+					</ul>  
+				</li>
+				<div class="adword">
+						<div><h3>Quảng cáo</h3></div>
+						<div><img src="img/hieu-qua.gif" alt=""></div>
+						<div><img src="img/google-noi-ve-inova.gif" alt="">
+				</div>
+		</div>
+		</div>
+		
+		<div id="product">
+			<div class="header">
+				<h3>Sản phẩm tiêu biểu</h3>
+			</div>
+			<div class="item">
+				<h3 class="productname">Smart Tivi TCL 43 inch L43S62T</h3>
+				<div class="productImg">
+					<img src="img/-smart-tivi-tcl-43-inch-l43s62t-(2).jpg" width="300px" height="200px" title="Smart Tivi TCL 43 inch L43S62T">
+				</div>
+			</div>
+			<div class="item">
+				<h3 class="productname">Smart Tivi Panasonic 4K 43 inch TH-43FX500V</h3>
+				<div class="productImg">
+					<img src="img/tivi-panasonic-th-43fx500v-2-550x340.jpg" width="300px" height="200px" title="Smart Tivi Panasonic 4K 43 inch TH-43FX500V">
+				</div>
+			</div>
+			<div class="item">
+				<h3 class="productname">Máy giặt Samsung AddWash Inverter 9 kg WW90K52E0WW/SV</h3>
+				<div class="productImg">
+					<img src="img/vi-vn-samsung-ww90k52e0ww-sv-thiet-ke.jpg" width="300px" height="200px" title="Máy giặt Samsung AddWash Inverter 9 kg WW90K52E0WW/SV" >
+				</div>
+			</div>
+			<div class="item">
+				<h3 class="productname">Máy giặt Panasonic 9kg NA-F90V5LMX</h3>
+				<div class="productImg">
+					<img src="img/panasonic-na-f90v5lmx-300x300.png" width="300px" height="200px" title="Máy giặt Panasonic 9kg NA-F90V5LMX">
+				</div>
+			</div>
+			<div class="item">
+				<h3 class="productname">Bình siêu tốc Delites 1.8 lít ST18S04</h3>
+				<div class="productImg">
+					<img src="img/binh-dun-sieu-toc-binh-dun-sieu-toc-delites-st18s04-1-300x300.jpg" width="300px"   height="200px" title="Bình siêu tốc Delites 1.8 lít ST18S04/SV">
+				</div>
+			</div>
+			<div class="item">
+				<h3 class="productname">Nồi cơm điện Delites 1.8 lít NCG1805</h3>
+				<div class="productImg">
+					<img src="img/delites-ncg1805-1-1-org.jpg" width="300px" height="200px" title="Nồi cơm điện Delites 1.8 lít NCG1805">
+				</div>
+			</div>
+			<div class="item">
+				<h3 class="productname">Máy sấy tóc Delites MST03</h3>
+				<div class="productImg">
+					<img src="img/delites-mst03-1-org.jpg" width="300px" height="200px" title="Máy sấy tóc Delites MST03">
+				</div>
+			</div>
+			<div class="item">
+				<h3 class="productname">Nồi cơm điện Delites 1.5 lít NCR1502</h3>
+				<div class="productImg">
+					<img src="img/noi-com-dien-delites-ncr1502-1-org.jpg" width="300px" height="200px" title="Nồi cơm điện Delites 1.5 lít NCR1502">
+				</div>
+			</div>
+			<div class="item">
+				<h3 class="productname">Máy lạnh Panasonic Inverter 1 HP CU/CS-PU9UKH-8</h3>
+				<div class="productImg">
+					<img src="img/panasonic-cu-cs-pu9ukh-8-1-1-org.jpg" width="300px" title="Máy lạnh Panasonic Inverter 1 HP CU/CS-PU9UKH-8">
+				</div>
+			</div>
+			<div class="item">
+				<h3 class="productname">Máy lạnh Samsung Inverter 1 HP AR10NVFHGWKNSV</h3>
+				<div class="productImg">
+					<img src="img/may-lanh-samsung-ar10nvfhgwknsv-1-org.jpg" width="300px" title="Máy lạnh Samsung Inverter 1 HP AR10NVFHGWKNSV">
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="footer"><p>Create by Vpm</p></div>
+		<div class="top"><a href="#"><img src="img/Upward Arrow_52px.png" alt=""></a></div>
+	</div>
+</body>
+</html>
