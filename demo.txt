@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+Branch master
+=======
+My name is branch 1
+>>>>>>> vietnb1
